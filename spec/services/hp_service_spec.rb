@@ -5,7 +5,7 @@ describe HarryPotterService do
     context "#get_from_house" do
       it "returns wizard info" do
         hp = HarryPotterService.new
-        search = hp.get_from_house("Slytherin")
+        search = hp.order_of_the_phoenix_members("Slytherin")
         expect(search).to be_a Array
         wizard_data = search.first
 

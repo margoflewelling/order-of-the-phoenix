@@ -1,4 +1,5 @@
 class Wizard
+
   attr_reader :name,
               :house,
               :role,
@@ -6,7 +7,7 @@ class Wizard
 
   def initialize(attributes)
     @name = attributes[:name]
-    @role = attributes[:role] if attributes[:role].present?
+    @role = attributes[:role].capitalize if attributes[:role].present?
     @patronus = attributes[:patronus].capitalize if attributes[:patronus].present?
     @house = attributes[:house]
   end

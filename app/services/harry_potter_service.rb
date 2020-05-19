@@ -1,6 +1,6 @@
 class HarryPotterService
 
-  def get_from_house(house)
+  def order_of_the_phoenix_members(house)
     search = Faraday.get("https://www.potterapi.com/v1/characters?house=#{house}&orderOfThePhoenix=true") do |f|
       f.params['key'] = ENV['HP_KEY']
     end
