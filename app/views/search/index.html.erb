@@ -1,15 +1,20 @@
 <h1> <%=@house%> </h1>
-<h2><%@wizards.count %>Order of the Phoenix Members</h2>
+<h2><%= @wizards.count %> Order of the Phoenix Members</h2>
+<ul>
 
 <% @wizards.each do |wizard| %>
+<li>
 <div class="wizard">
-  <p class = "name"><%= wizard.name %> </p>
+  <p class = "name">Name: <%= wizard.name %> </p>
   <% if wizard.role %>
-    <p class = "name"><%= wizard.role %> </p>
+    <p class = "role">Role: <%= wizard.role %> </p>
   <% end %>
-  <p class = "name"><%= wizard.house %> </p>
+  <p class = "house">House: <%= wizard.house %> </p>
   <% if wizard.patronus %>
-    <p class = "name"><%= wizard.patronus %> </p>
+    <p class = "patronus">Patronus: <%= wizard.patronus %> </p>
   <% end %>
 </div>
+</li>
+<br />
+</ul>
 <% end %>

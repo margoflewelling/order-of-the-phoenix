@@ -12,10 +12,11 @@ feature "user can search for members of a house that are in the ootp" do
     expect(current_path).to eq(search_path)
     expect(page).to have_content("21 Order of the Phoenix Members")
 
-    expect(page).to have_css(".wizard", count: 7)
+    expect(page).to have_css(".wizard", count: 21)
     within(first(".wizard")) do
-      expect(page).to have_content(".name")
+      expect(page).to have_css(".name")
       expect(page).to have_css(".house")
+      expect(page).to have_content("House: Gryffindor")
     end
   end
 end
