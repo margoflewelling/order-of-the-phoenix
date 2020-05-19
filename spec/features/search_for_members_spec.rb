@@ -10,7 +10,7 @@ feature "user can search for members of a house that are in the ootp" do
     click_on 'Search For Members'
 
     expect(current_path).to eq(search_path)
-    expect(page).to have_content("Griffindor: 21 Order of the Phoenix Members")
+    expect(page).to have_content("21 Order of the Phoenix Members")
 
     expect(page).to have_css(".member", count: 7)
     within(first(".member")) do
